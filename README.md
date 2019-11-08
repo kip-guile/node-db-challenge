@@ -59,7 +59,7 @@ Complete the following tasks:
   - [ ] adding projects.
   - [*] retrieving a list of projects.
   - [ ] adding tasks.
-  - [] retrieving a list of tasks. **The list of tasks should include the project name and project description**.
+  - [*] retrieving a list of tasks. **The list of tasks should include the project name and project description**.
 - [ ] When returning `project` or `task` information, the `completed` property should be `true` or `false`.
 
 For example, instead of returning a `task` that looks like this:

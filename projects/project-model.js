@@ -2,7 +2,8 @@ const db = require('../data/db-config')
 
 module.exports = {
     getProjects,
-    getResources
+    getResources,
+    getTasks
 }
 
 function getProjects() {
@@ -11,4 +12,11 @@ function getProjects() {
 
 function getResources() {
     return db('resource')
+}
+
+function getTasks(project_id) {
+    return db('task as t')
+    .join('project as p', 'p.id', 't.project_id')
+    .select('t.description', 't.notes', 't.completed', 'p.name')
+    .where('p.id', project_id)
 }

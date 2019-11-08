@@ -14,4 +14,20 @@ router.get('/', (req, res) => {
         })
 })
 
+router.get('/:id/tasks', (req, res) => {
+    const {id} = req.params
+
+    Projects.getTasks(id)
+        .then(tasks => {
+            if (tasks.length) {
+                res.json(tasks)
+            } else {
+                res.status(404)
+            }
+        })
+        .catch(err => {
+            res.status(500).json({ message: 'Failed to get tasks' })
+        })
+})
+
 module.exports = router;

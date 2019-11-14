@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+a relational database is structured to recognize the relationship between stored items of information while SQL is a language used to control and query the database
+
 - [ ] Why do tables need a `primary key`?
+
+Tables need a primary key because they need to have a unique identifier in order to be referenced
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+Foreign key
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+A parent row needs to have several child rows in another table, and vice versa
 
 ## Minimum Viable Product
 
@@ -54,12 +62,12 @@ Complete the following tasks:
 
 - [ ] Design the data model and use _knex migrations_ to create the database and tables.
 - [ ] Build an API with endpoints for:
-  - [ ] adding resources.
-  - [ ] retrieving a list of resources.
-  - [ ] adding projects.
-  - [ ] retrieving a list of projects.
-  - [ ] adding tasks.
-  - [ ] retrieving a list of tasks. **The list of tasks should include the project name and project description**.
+  - [*] adding resources.
+  - [*] retrieving a list of resources.
+  - [*] adding projects.
+  - [*] retrieving a list of projects.
+  - [*] adding tasks.
+  - [*] retrieving a list of tasks. **The list of tasks should include the project name and project description**.
 - [ ] When returning `project` or `task` information, the `completed` property should be `true` or `false`.
 
 For example, instead of returning a `task` that looks like this:
